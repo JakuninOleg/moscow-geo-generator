@@ -1,23 +1,21 @@
 <template>
-  <div class="">
-    <client-only>
-      <yandex-map
-        :coords="[37.620407, 55.754093]"
-        class="map"
-        :controls="[]"
-        :zoom="9"
-        :use-object-manager="true"
-      >
-        <ymap-marker
-          v-for="(item, id) in coordinates"
-          :key="id"
-          :marker-id="id"
-          marker-type="placemark"
-          :coords="item"
-        ></ymap-marker>
-      </yandex-map>
-    </client-only>
-  </div>
+  <client-only>
+    <yandex-map
+      :coords="[37.620407, 55.754093]"
+      class="map"
+      :controls="[]"
+      :zoom="9"
+      :use-object-manager="true"
+    >
+      <ymap-marker
+        v-for="(item, id) in coordinates"
+        :key="id"
+        :marker-id="id"
+        marker-type="placemark"
+        :coords="item"
+      ></ymap-marker>
+    </yandex-map>
+  </client-only>
 </template>
 
 <script>
@@ -45,5 +43,6 @@ export default {
 .ymap-container {
   height: 500px;
   width: 600px;
+  justify-self: center;
 }
 </style>

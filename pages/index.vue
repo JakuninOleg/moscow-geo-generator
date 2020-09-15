@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <button @click="generateNewData">Сгенерировать новые метки</button>
+    <button class="button" @click="generateNewData">Сгенерировать новые метки</button>
     <div class="main-content">
       <Map :map-data="mapData" />
       <AmChart :chart-data="chartData" @filterMap="filterMap" />
@@ -68,7 +68,38 @@ export default {
 }
 
 .main-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   justify-content: center;
+}
+
+.button {
+  transition: all 0.32s ease-out;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+
+.button:hover {
+  background-color: #6FC6FF;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.button:focus {
+  outline: none;
 }
 </style>
