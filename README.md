@@ -1,20 +1,10 @@
-# moscow-geo-generator
+# Moscow Geo Generator
 
-## Build Setup
+## Powered by Nuxt, Vercel, amCharts and YandexMaps
 
-```bash
-# install dependencies
-$ yarn install
+App generates 100 random points inside polygons of Moscow Administrative Disctricts
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+Map can be filtered with click event on a provided diagram
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Play here
+https://moscow-geo-generator.vercel.app/
